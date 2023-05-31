@@ -6,7 +6,7 @@
 
 **Assignment 07**
 
-**[GitHub Page](https://github.com/JSKeating/IntroToProg-Python)**
+**[GitHub Page](https://jskeating.github.io/IntroToProg-Python-Mod07/)**
 # Pickling and Error Handling
 ## Introduction
 This assignment was a bit more open-ended - our task was to create a program that demonstrates both pickling and error handling. I will start out by talking a little bit about the differences between pickled files and the text files we’ve been working with previously and then move into my idea for a program, a Home Buying/Selling calculator. The program will require quite a bit more time and attention later on to be really show ready for an interview situation, but it was a fun stretch to see what I could come up with while exhibiting these two techniques. 
