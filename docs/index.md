@@ -21,7 +21,7 @@ By using pickling, as we’ll see later, you can add an additional level of secu
 ## The Home Buy/Sell Calculator
 For my script, I decided to demonstrate pickling and error handling with a home-selling based program. I started by using pseudo-code to explain the goals of my program and help me start to outline how I’ll accomplish them. I’m going to first ask for user input on whether or not they’d like to buy or sell, then collect some information I would need to help them see their expected proceeds from selling the home (current mortgage, expected sale price, commissions they’ll pay to agents, etc). I’ll then need to display all of this back to them in an easy to understand block of info. I’m also going to create a custom exception class if the user selects “buy”. This will serve two purposes - it allows me to illustrate how to create a custom exception AND will save me some time on this assignment! :) 
 
-![Figure 2.1 - Pseudo-code for Presentation aspects](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%202.1.png)
+![Figure 2.1 - Pseudo-code for Presentation aspects](Figure21.png)
 #####  Figure 2.1 - Pseudo-code for Presentation aspects 
 
 Our first step is to collect the first user input for their “Buy” or “Sell” choice. I’m going to create an IO (input/output) class with a buy_or_sell function inside of it. This function will collect the user choice and return it to the main body of our script. I’m asking for the user to provide either “B” for Buy or “S” for Sell. This opens us up to a couple of different potential user errors - they could enter a letter we aren’t expecting, they could enter a number, they could enter nothing! Let’s create some custom errors to catch these different options. 
@@ -31,29 +31,29 @@ To do this, I’m going to create a Processor function called choice_check - cho
 ## try/except Blocks
 Let’s say you are expecting one type of input from a user, but they give you something completely different. Usually, that will end your script with an error message from Python. For example, see Figure 3.1 for a simple addition script. 
 
-![Figure 3.1 - A simple addition program adding two user inputs](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%203.1.png)
+![Figure 3.1 - A simple addition program adding two user inputs](Figure31.png)
 ##### Figure 3.1 - A simple addition program adding two user inputs
 
 Let’s say a user enters a script variable instead of a number - what happens then? Python will generate an error message and end the program. As you can see in Figure 3.2, the error messages are complicated and somewhat confusing - especially for a user not familiar with the inner workings of your script. 
 
-![Figure 3.2 - Python’s ValueError message displayed to the user](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%203.2.png)
+![Figure 3.2 - Python’s ValueError message displayed to the user](Figure32.png)
 ##### Figure 3.2 - Python’s ValueError message displayed to the user
 
 By using a try/except block, you can accomplish two things - send a more user-friendly error message and keep your program from ending. Let’s set up a try/except block within a while loop that will keep the program going as long as the user has not entered two integers to be added. 
 
-![Figure 3.3 - Seeing our try/except block in action](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%203.3.png)
+![Figure 3.3 - Seeing our try/except block in action](Figure33.png)
 ##### Figure 3.3 - Seeing our try/except block in action
 
 The program will first read the try section and attempt to run the script there. If an error is encountered, the program jumps to the except portion and runs the script there. As you can see in the output, the user entered an invalid option (a string variable where an integer was expected) and the except script was run (“Something went wrong!” was printed). Using the while loop gives the user another chance to enter the correct variables. 
 
 That seems easy enough, but sometimes it may be unclear to you or your user what is actually causing the error. You can use Python’s internal programming to help you identify what the error is and help you add more specificity to your outputs to the user. Using the as command, you can capture the argument from the raised exception in your try block as a variable and use that to provide the end user more information. See Figure 3.4 for some helpful options. 
 
-![Figure 3.4 - Using the as keyword to obtain error message info](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%203.4.png)
+![Figure 3.4 - Using the as keyword to obtain error message info](Figure34.png)
 ##### Figure 3.4 - Using the as keyword to obtain error message info 
 
 By using the as keyword and obtaining the error class (ValueError) in this case, we can also set up an exception block specifically to catch that error. This allows us to be more specific in our corrections to the end user. See Figure 3.5 for an updated run. 
 
-![Figure 3.5 - Our error is caught as a ValueError and the user is prompted to use an integer](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%203.5.png)
+![Figure 3.5 - Our error is caught as a ValueError and the user is prompted to use an integer](Figure35.png)
 ##### Figure 3.5 - Our error is caught as a ValueError and the user is prompted to use an integer
 
 Finally, we can also create our own error catching exceptions and arguments for any custom-errors we’d like within our program. Let’s jump back into the main script and see how that works. 
