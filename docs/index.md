@@ -61,15 +61,15 @@ Finally, we can also create our own error catching exceptions and arguments for 
 ## Creating a Custom-Error Block
 Each error block is essentially its own class, so we’ll create them similarly to how we create our IO and Processing classes. You name the error and define the string to be returned when a user encounters this error. See Figure 4.1 and 4.2 for our first example. 
 
-![Figure 4.1 - buy_not_ready error returns message to the except block where the error was raised.](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%204.1.png)
+![Figure 4.1 - buy_not_ready error returns message to the except block where the error was raised.](Figure41.png)
 ##### Figure 4.1 - buy_not_ready error returns message to the except block where the error was raised. 
 
-![Figure 4.2 - User enters “b” and triggers our custom buy_not_ready exception](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%204.2.png)
+![Figure 4.2 - User enters “b” and triggers our custom buy_not_ready exception](Figure42.png)
 ##### Figure 4.2 - User enters “b” and triggers our custom buy_not_ready exception
 
 We’ll also create another block in case the user enters anything else other than the “s” that we want. 
 
-![Figure 4.3 - User errors with input other than “s” or “b” and is reminded of available inputs](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%204.3.png)
+![Figure 4.3 - User errors with input other than “s” or “b” and is reminded of available inputs](Figure43.png)
 ##### Figure 4.3 - User errors with input other than “s” or “b” and is reminded of available inputs
 
 With the special errors dealt with, I’m going to skip ahead through some of my basic coding and move to the pickling section of the program. 
@@ -77,39 +77,39 @@ With the special errors dealt with, I’m going to skip ahead through some of my
 ## Pickling your data
 As we discussed above, pickling your data into a binary file can be extremely useful. While I have big dreams for my Home Buy/Sell program, for now I’ll simply settle with saving the data we acquired from the user into a binary file called HomeData.dat.  I collected information from the user through an IO function titled seller_inputs and used those to make some calculations about their potential proceeds from selling their home. I’m going to also save that data for potential future use. I’ll prompt the user to save and if yes, we’ll run our save_data_to_file processor function. To use the pickle functions, you must first use the import pickle command to load these functions for use - we’ll be using both pickle.load() and pickle.dump(). See Figures 5.1 through 5.3 to see them in action
 
-![Figure 5.1 - Main body of script](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%205.1.png)
+![Figure 5.1 - Main body of script](Figure51.png)
 ##### Figure 5.1 - Main body of script
 
-![Figure 5.2 - save_data_to_file processor function](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%205.2.png)
+![Figure 5.2 - save_data_to_file processor function](Figure52.png)
 ##### Figure 5.2 - save_data_to_file processor function
 
 To ensure the data was saved as a binary file, I’ll run the program below and check our outputs. I’m also opening our binary file and reading it back (see read_data_from_file function in Figure 5.3) and then also opening the saved binary file as if it were a text file to see the “pickled” data within our program (see Figure 5.4). 
 
-![Figure 5.3 - Reading our binary file](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%205.3.png)
+![Figure 5.3 - Reading our binary file](Figure53.png)
 ##### Figure 5.3 - Reading our binary file
 
-![Figure 5.4 - Reading our binary file as a text file](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%205.4.png)
+![Figure 5.4 - Reading our binary file as a text file](Figure54.png)
 ##### Figure 5.4 - Reading our binary file as a text file
 
 ## Testing
 Alright, we’ll now test all features in both PyCharm and CMD to ensure our script is working as intended. 
 
-![Figure 6.1 - Running in PyCharm - Catching both custom errors successfully and looping back into program](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.1.png)
+![Figure 6.1 - Running in PyCharm - Catching both custom errors successfully and looping back into program](Figure61.png)
 ##### Figure 6.1 - Running in PyCharm - Catching both custom errors successfully and looping back into program 
 
-![Figure 6.2 - Running in PyCharm -  “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.2.png)
+![Figure 6.2 - Running in PyCharm -  “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program](Figure62.png)
 ##### Figure 6.2 - Running in PyCharm -  “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program
 
-![Figure 6.3 - HomeData.dat file updated successfully - “123 Main St” is visible from user inputs](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.3.png)
+![Figure 6.3 - HomeData.dat file updated successfully - “123 Main St” is visible from user inputs](Figure63.png)
 ##### Figure 6.3 - HomeData.dat file updated successfully - “123 Main St” is visible from user inputs
 
-![Figure 6.4 - Running in CMD - Catching both custom errors successfully and looping back into program](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.4.png)
+![Figure 6.4 - Running in CMD - Catching both custom errors successfully and looping back into program](Figure64.png)
 ##### Figure 6.4 - Running in CMD - Catching both custom errors successfully and looping back into program
 
-![Figure 6.5 - Running in CMD - “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.5.png)
+![Figure 6.5 - Running in CMD - “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program](Figure65.png)
 ##### Figure 6.5 - Running in CMD - “Sell” option collects user data, calculates proceeds, and saves into pickled binary file which is then read back and displayed to user (both pickled and unpickled) before exiting the program
 
-![Figure 6.6  - Confirming HomeData.dat changes - “1600 Washington Ave” visible](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%206.6.png)
+![Figure 6.6  - Confirming HomeData.dat changes - “1600 Washington Ave” visible](Figure66.png)
 ##### Figure 6.6  - Confirming HomeData.dat changes - “1600 Washington Ave” visible 
 
 ## Building a Git-Hub website
@@ -117,12 +117,12 @@ As the last piece of this assignment, we’ll be re-building this doc into a Git
 
 We start by creating a new repository for this Module (see Figure 7.1) and then creating a new index.md file which is where we’ll do our actual editing (see Figure 7.2). To create the new repository, log into your GitHub account and select the green “New” button on your Repositories tab. Remember to add a ReadMe.md file to the repository for any comments you’ll want to make for your viewers.
 
-![Figure 7.1 - Creating a new repository](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%207.1.png)
+![Figure 7.1 - Creating a new repository](Figure71.png)
 ##### Figure 7.1 - Creating a new repository
 
 To add the index.md page, click on the “Add New File” button on your repository page. At the top of the page,  you’ll see a file path prompting you to “Name your file…”. In this box, you’ll want to type “docs” followed by a forward slash and then “index.md”. This will create a “docs” folder and place your index.md file inside it. 
 
-![Figure 7.2 - Creating the index.md file](https://github.com/JSKeating/IntroToProg-Python-Mod07/blob/main/docs/images/Figure%207.2.png)
+![Figure 7.2 - Creating the index.md file](Figure72.png)
 ##### Figure 7.2 - Creating the index.md file
 
 The index.md file is where we’ll work on recreating our document. Click on the pencil tool to begin editing and you’ll see you have two panes to view your file in - “Edit” and “Preview”. Edit allows you to use “markdown” language to format your text. Markdown has many different uses, but for our purposes in this assignment, I’m mostly going to be using the single and double asterisks (single for italics, double for bold), the hashes (single hash is large header, double hash is slightly smaller, and so on up to six hashes), and coding to insert photos. Much more info can be found in this GitHub article: Basic writing and formatting syntax - [GitHub Docs - Basic formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#section-links).
