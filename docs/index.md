@@ -15,7 +15,7 @@ So far in this course, we’ve been reading, writing and appending text files. B
 
 By using pickling, as we’ll see later, you can add an additional level of security to the data you intend to store. When opened by a human, these binary files will look almost like complete gibberish. Only when the file is “un-pickled” can one understand what the data means. 
 
-![Figure 1.1 - A pickled text file](Figure 1.png)
+![Figure 1.1 - A pickled text file](Figure1.png)
 ##### Figure 1.1 - A pickled text file
 
 ## The Home Buy/Sell Calculator
